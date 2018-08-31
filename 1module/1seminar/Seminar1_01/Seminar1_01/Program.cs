@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Seminar1_01
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-        }
+        Console.WriteLine("Это первая программа!");
+        Console.WriteLine("Нажмите Enter для завершения!");
+        Console.ReadKey();
     }
 }
