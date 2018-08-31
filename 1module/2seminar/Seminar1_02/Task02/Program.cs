@@ -28,18 +28,19 @@ class Program
           s, // площадь круга
           c;  // длина окружности        
         string str;    // Рабочая строка для ввода и вывода данных 
+        do
+        {                  // цикл для повторения решения
+            do {
+                Console.Write("Введите радиус: ");
+                str = Console.ReadLine();         //Читаем символьную строку 
+            } while (!double.TryParse(str, out r)); //Преобразуем строку в число 
 
-        do {
-            Console.Write("Введите радиус: ");
-            str = Console.ReadLine();         //Читаем символьную строку 
-        } while (!double.TryParse(str, out r)); //Преобразуем строку в число 
+            s = Square(r, out c);
 
-        s = Square(r, out c);
-
-        Console.WriteLine("Площадь: " + s);         
-        Console.WriteLine("Длина окружности: " + s);         
-        Console.WriteLine("Для выхода из программы нажмите ENTER.");
-        Console.ReadLine();
+            Console.WriteLine("Площадь: " + s.ToString("f3"));
+            Console.WriteLine("Длина окружности: " + c.ToString("f3"));
+            Console.WriteLine("Для выхода из программы нажмите ESC.");
+        } while (Console.ReadKey(true).Key != ConsoleKey.Escape);
     } //Конец определения метода
 } //Конец объявления класса
 
