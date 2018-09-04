@@ -49,7 +49,7 @@ namespace Task07
                     st += "Ответ 3. Название филиала, который продал максимальное количество автомобилей по результатам года = " +
                            Filials[NFiliala_MaxAutoYear] +
                            ", проданное количество автомобилей = " + MaxAutoFilialZaGod + "\r\n"; break;
-                case "4":
+                case "4": 
                     maxAutoKvartal(out SumKvartal, out NKvartal_MaxAuto, out MaxAutoKvartal);
                     st += "Ответ 4. Наиболее успешный квартал = " + Kvartal[NKvartal_MaxAuto] + ", проданное количество автомобилей = " + MaxAutoKvartal + "\r\n"; break;
                 default: st += "Неизвестный режим. Введите число [0..4]\r\n"; break;
