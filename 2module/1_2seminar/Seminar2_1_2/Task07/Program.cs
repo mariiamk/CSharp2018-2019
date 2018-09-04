@@ -44,7 +44,7 @@ namespace Task07
                     GetMax4Kvartal(out Nstroki, out Nstolbca);
                     st += "Ответ 2. Mаксимальное количество автомобилей = " +
                        auto[Nstroki, Nstolbca] + ", Квартал = " + Kvartal[Nstroki] + ", Филиал = " + Filials[Nstolbca] + "\r\n"; break;
-                case "3":
+                case "3": 
                     maxAutoFilialZaGod(out SumFilial, out NFiliala_MaxAutoYear, out MaxAutoFilialZaGod);
                     st += "Ответ 3. Название филиала, который продал максимальное количество автомобилей по результатам года = " +
                            Filials[NFiliala_MaxAutoYear] +
