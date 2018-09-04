@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 // Определите и инициализируйте массив строк.
 // Выведите строки в порядке возрастания их длин.
