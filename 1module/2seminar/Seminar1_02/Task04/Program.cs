@@ -28,8 +28,8 @@ namespace Task04
             string report;          // Строка с заключением о коде
             uint code_A = (uint)'А',  // Числовое значение кода буквы А
                   code_a = (uint)'а',
-                  code_Ya = (uint)'я',
-                  code_ya = (uint)'Я',
+                  code_Ya = (uint)'Я',
+                  code_ya = (uint)'я',
                   code_0 = (uint)'0';   // Числовое значение кода цифры 0
             do
             {

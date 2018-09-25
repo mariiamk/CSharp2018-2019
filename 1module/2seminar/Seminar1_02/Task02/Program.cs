@@ -33,7 +33,7 @@ class Program
             do {
                 Console.Write("Введите радиус: ");
                 str = Console.ReadLine();         //Читаем символьную строку 
-            } while (!double.TryParse(str, out r)); //Преобразуем строку в число 
+            } while (!double.TryParse(str, out r) || r <= 0); //Преобразуем строку в число 
 
             s = Square(r, out c);
 

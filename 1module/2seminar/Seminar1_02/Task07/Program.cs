@@ -26,7 +26,7 @@ namespace Task07
                 str = Console.ReadLine();
                 int.TryParse(str, out tmp);
                 z = tmp > 0 ? true : false;
-
+                // !а+b
                 Console.WriteLine("!(X&&Y||Z) = " + !(x && y || z));
 
                 Console.WriteLine("Для выхода нажмите ENTER.");
