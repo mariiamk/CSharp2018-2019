@@ -1,3 +1,6 @@
+[Cсылка на разбор](https://docs.google.com/presentation/d/1AXLcAe5FfYDMdKde5_0qVX3Z0ryodIwxtzENtxeGaPo/edit#slide=id.p) 
+
+
 <h2>Вариант 1.1</h2>
 Программа запрашивает у пользователя два значения:
 
