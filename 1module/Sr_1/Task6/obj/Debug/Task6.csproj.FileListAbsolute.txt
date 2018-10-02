@@ -1,0 +1,6 @@
+/home/sanusha/Proga/HSE/Ass/Sr_1/Task6/bin/Debug/Task6.exe
+/home/sanusha/Proga/HSE/Ass/Sr_1/Task6/bin/Debug/Task6.pdb
+/home/sanusha/Proga/HSE/Ass/Sr_1/Task6/obj/Debug/Task6.csprojResolveAssemblyReference.cache
+/home/sanusha/Proga/HSE/Ass/Sr_1/Task6/obj/Debug/Task6.csproj.CoreCompileInputs.cache
+/home/sanusha/Proga/HSE/Ass/Sr_1/Task6/obj/Debug/Task6.exe
+/home/sanusha/Proga/HSE/Ass/Sr_1/Task6/obj/Debug/Task6.pdb

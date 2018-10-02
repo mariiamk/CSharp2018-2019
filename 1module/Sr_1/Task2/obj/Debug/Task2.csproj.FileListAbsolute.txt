@@ -1,0 +1,6 @@
+/home/sanusha/Proga/HSE/Ass/Sr_1/Task2/bin/Debug/Task2.exe
+/home/sanusha/Proga/HSE/Ass/Sr_1/Task2/bin/Debug/Task2.pdb
+/home/sanusha/Proga/HSE/Ass/Sr_1/Task2/obj/Debug/Task2.csprojResolveAssemblyReference.cache
+/home/sanusha/Proga/HSE/Ass/Sr_1/Task2/obj/Debug/Task2.csproj.CoreCompileInputs.cache
+/home/sanusha/Proga/HSE/Ass/Sr_1/Task2/obj/Debug/Task2.exe
+/home/sanusha/Proga/HSE/Ass/Sr_1/Task2/obj/Debug/Task2.pdb
