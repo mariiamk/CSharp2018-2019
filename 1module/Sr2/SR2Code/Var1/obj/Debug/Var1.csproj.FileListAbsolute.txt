@@ -1,6 +1,0 @@
-/home/sanusha/Proga/HSE/Ass/SR2Code/Var1/bin/Debug/Var1.exe
-/home/sanusha/Proga/HSE/Ass/SR2Code/Var1/bin/Debug/Var1.pdb
-/home/sanusha/Proga/HSE/Ass/SR2Code/Var1/obj/Debug/Var1.csprojResolveAssemblyReference.cache
-/home/sanusha/Proga/HSE/Ass/SR2Code/Var1/obj/Debug/Var1.csproj.CoreCompileInputs.cache
-/home/sanusha/Proga/HSE/Ass/SR2Code/Var1/obj/Debug/Var1.exe
-/home/sanusha/Proga/HSE/Ass/SR2Code/Var1/obj/Debug/Var1.pdb
