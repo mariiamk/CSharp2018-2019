@@ -6,6 +6,6 @@ class Program
     { 
         Console.WriteLine("Это первая программа!");
         Console.WriteLine("Нажмите Enter для завершения!");
-        Console.ReadKey();
+        Console.ReadKey(); 
     }
 }
