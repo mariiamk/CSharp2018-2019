@@ -28,7 +28,7 @@ namespace Task07
                 z = tmp > 0 ? true : false;
                 // !а+b
                 Console.WriteLine("!(X&&Y||Z) = " + !(x && y || z));
-
+                 
                 Console.WriteLine("Для выхода нажмите ENTER.");
             } while (Console.ReadKey(true).Key != ConsoleKey.Escape);
         }
