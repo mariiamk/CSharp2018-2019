@@ -26,7 +26,7 @@ class Program
         } //i
         Console.WriteLine();
         char[] newline = (char[])line.Clone();
-        // упорядочение букв в массиве и вывод
+        // упорядочение букв в массиве и вывод 
         Array.Sort(newline);
         foreach (char ch in newline)
             Console.Write("{0,2}", ch);
