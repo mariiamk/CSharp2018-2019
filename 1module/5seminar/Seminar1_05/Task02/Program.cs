@@ -20,7 +20,7 @@ class Program
         line = new char[K];
 
         for (int i = 0; i < K; i++)
-        {
+        { 
             line[i] = (char)generator.Next('A', 'Z' + 1);
             Console.Write("{0,2}", line[i]);
         } //i
