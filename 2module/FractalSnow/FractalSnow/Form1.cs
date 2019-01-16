@@ -38,6 +38,7 @@ namespace FractalSnow
                 gr.DrawLine(pen1, p1, p2);
                 gr.DrawLine(pen1, p2, p3);
                 gr.DrawLine(pen1, p3, p1);
+
                 Fractal(p1, p2, p3, n - 1);
                 Fractal(p2, p3, p1, n - 1);
                 Fractal(p3, p1, p2, n - 1);
@@ -54,8 +55,10 @@ namespace FractalSnow
 
                 Fractal(p4, pn, p5, n - 1);
                 Fractal(pn, p5, p4, n - 1);
-                Fractal(p1, p4, new PointF((2 * p1.X + p3.X) / 3, (2 * p1.Y + p3.Y) / 3), n - 1);
-                Fractal(p5, p2, new PointF((2 * p2.X + p3.X) / 3, (2 * p2.Y + p3.Y) / 3), n - 1);
+                Fractal(p1, p4, new PointF((2 * p1.X + p3.X) / 3,
+                    (2 * p1.Y + p3.Y) / 3), n - 1);
+                Fractal(p5, p2, new PointF((2 * p2.X + p3.X) / 3, 
+                    (2 * p2.Y + p3.Y) / 3), n - 1);
 
             }
             return n;
@@ -68,8 +71,8 @@ namespace FractalSnow
             float w = pictureBox1.Width;
             float h = pictureBox1.Height;
             Fractal(new PointF(w / 2, h / 5),
-                new PointF((float)(w - 6 * w / (5 * Math.Sqrt(3)))/2, 4 * h / 5), 
-                new PointF((float)((w - 6 * w / (5 * Math.Sqrt(3))) / 2  + 6 * w / (5 * Math.Sqrt(3))), 4 * h / 5),
+                new PointF((float)(w/2 - 3 * w / (5 * Math.Sqrt(3))), 4 * h / 5), 
+                new PointF((float)(w/2 + 3 * w / (5 * Math.Sqrt(3))), 4 * h / 5),
                 iter);
         }
     }
