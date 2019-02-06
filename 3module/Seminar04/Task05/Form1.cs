@@ -36,7 +36,7 @@ namespace Task05
     class Circle
     {
         double r;
-        public event EventHandler OnRadiusChanged;
+        public event EventHandler RadiusChanged;
         public double R
         {
             get
@@ -46,8 +46,12 @@ namespace Task05
             set
             {
                 r = value;
-                OnRadiusChanged(this, EventArgs.Empty);
+                OnRadiusChanged(EventArgs.Empty);
             }
+        }
+        public virtual void OnRadiusChanged(EventArgs e)
+        {
+            if (RadiusChanged != null) RadiusChanged(this, e);
         }
         public Circle(double rad)
         {
@@ -66,7 +70,7 @@ namespace Task05
             trq = pb;
             pen = new Pen(Color.Black);
             this.c = c;
-            c.OnRadiusChanged += Draw;
+            c.RadiusChanged += Draw;
         }
 
         public Color PenColor
