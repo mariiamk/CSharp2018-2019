@@ -15,7 +15,7 @@ namespace Task02
             Print delPrint; // Ссылка на делегат
 
             delRow = new Class1.Row(Class1.GetDigits); // Экземпляр делегата
-            delPrint = new Print(Class1.Display); // Экземпляр делегата
+            delPrint = Class1.Display; // Экземпляр делегата
 
             int[] myAr = delRow(13579); // Вызов метода через делегат 
             delPrint(myAr); // Вызов метода через делегат 

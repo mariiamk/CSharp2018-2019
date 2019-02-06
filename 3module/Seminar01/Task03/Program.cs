@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Task03
 {
-    public delegate double delegateConvertTemperature(double sourceTemp);
+    public delegate double delegateConvertTemperature
+        (double sourceTemp);
     class TemperatureConverterImp
     {
         public double ConvertToFahrenheit(double celsius)
@@ -25,20 +26,25 @@ namespace Task03
         {
             TemperatureConverterImp obj = new TemperatureConverterImp();
             delegateConvertTemperature delConvertToFahrenheit =
-                              new delegateConvertTemperature(obj.ConvertToFahrenheit);
+                              new delegateConvertTemperature
+                              (obj.ConvertToFahrenheit);
+
             delegateConvertTemperature delConvertToCelsius =
-                                 new delegateConvertTemperature(obj.ConvertToCelsius);
+                                 new delegateConvertTemperature
+                                 (obj.ConvertToCelsius);
             
             double celsius = 0.0;
             double fahrenheit = delConvertToFahrenheit(celsius);
             string msg1 = string.Format("Celsius = {0}, Fahrenheit = {1}",
                                                          celsius, fahrenheit);
             Console.WriteLine(msg1);
+
             fahrenheit = 212.0;
             celsius = delConvertToCelsius(fahrenheit);
             string msg2 = string.Format("Celsius = {0}, Fahrenheit = {1}",
                                                          celsius, fahrenheit);
             Console.WriteLine(msg2);
+            Console.WriteLine(delConvertToCelsius.Target);
             Console.ReadKey();
         }
     }

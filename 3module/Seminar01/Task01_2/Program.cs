@@ -11,7 +11,7 @@ namespace Task01_2
         public delegate int Cast(double p);
         static void Main(string[] args)
         {
-            Cast obj1 = (double par) =>
+            Cast obj1 = (par) =>
             {
                 Console.WriteLine("DEL 1");
                 return (int)Math.Ceiling(par);
