@@ -6,10 +6,22 @@ using System.Threading.Tasks;
 
 namespace Task00
 {
+
+    class StringEventArgs : EventArgs
+    {
+        string s;
+        public StringEventArgs(string str)
+        {
+            s = str;
+        }
+        public override string ToString()
+        {
+            return s;
+        }
+    }
     class Input
     {
-        public delegate void GetUserInputDel(string str);
-        public event GetUserInputDel UserInput;
+        public event EventHandler<StringEventArgs> UserInput;
 
         public void GetUserInput()
         {
@@ -20,7 +32,7 @@ namespace Task00
                 string input = Console.ReadLine();
                 if (input.Trim() != "q")
                 {
-                    UserInput(input);
+                    UserInput(this, new StringEventArgs(input));
                 }
                 else break;
             }
@@ -28,13 +40,14 @@ namespace Task00
     }
     class Program
     {
-        public static void UserInputHadler(string str)
+        public static void UserInputHadler(object o, StringEventArgs str)
         {
-            Console.WriteLine("YouTyped: " + str);
+            Console.WriteLine("You Typed: " + str);
         }
         static void Main(string[] args)
         {
             Input input = new Input();
+
             input.UserInput += UserInputHadler;
 
             input.GetUserInput();

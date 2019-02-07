@@ -3,10 +3,9 @@
 namespace Task02
 {
     public delegate double ExpDel(double x);
+    public delegate void ExpChanged();
     class Expression
     {
-        public delegate void ExpChanged();
-
         ExpDel ex;
 
         public event ExpChanged OnExpChanged;
