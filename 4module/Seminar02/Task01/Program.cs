@@ -4,36 +4,32 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Serialization;
 
-namespace Task01_xml2
+namespace Task01
 {
-    [Serializable]
-    public class Student
+    [DataContract]
+    class Student
     {
+        [DataMember]
         public string name;
+        [DataMember]
         public int year;
-        public Student()
-        {
-
-        }
         public Student(string n, int y)
         {
             name = n;
             year = y;
         }
     }
-    [Serializable]
-    public class Group
+    [DataContract]
+    class Group
     {
+        [DataMember]
         public string ident;   // group's identifier
+        [DataMember]
         public Student[] list;  // students' list
-        public Group()
-        {
-
-        }
         public Group(string id, Student[] list)
         {
             ident = id;
@@ -59,20 +55,21 @@ namespace Task01_xml2
             Student[] list271 = {new Student("Яколев", 2),
                 new Student("Юрьевa", 2),new Student("Энатов",2)};
             Group gr271 = new Group("ПИ-271", list271);
-
-            Group[] groups = new Group[] { gr271, gr171};
+            Group[] groups = new Group[] { gr171, gr271 };
 
             FileStream bas = new FileStream("group.ser", FileMode.Create);
-            XmlSerializer format = new XmlSerializer(typeof(Group[]));
-            format.Serialize(bas, groups);
+            DataContractJsonSerializer format = new DataContractJsonSerializer(typeof(Group[]));
+            format.WriteObject(bas, groups);
             bas.Close();
 
             Console.WriteLine("Выполнена запись в файл group.ser");
 
             bas = new FileStream("group.ser", FileMode.Open);
 
-            Group[] gr = (Group[])format.Deserialize(bas);
-            Console.WriteLine(gr.ToString());
+
+            Group[] gr1 = (Group[])format.ReadObject(bas);
+            foreach (Group gr2 in gr1)
+                Console.WriteLine(gr2.ToString());
 
             Console.ReadKey();
         }

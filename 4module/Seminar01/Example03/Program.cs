@@ -33,6 +33,7 @@ namespace Example03
             obj.n1 = 1;
             obj.n2 = 24;
             obj.str = "Some String";
+
             SoapFormatter formatter = new SoapFormatter();
             Stream stream = new FileStream("MyFile2.txt", FileMode.Create, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, obj);

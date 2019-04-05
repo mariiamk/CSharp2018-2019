@@ -38,9 +38,11 @@ namespace Example09
         {
             Student s1 = new Student(29, 8, "Tom");
             Student s2 = new Student(14, 5, "Bill");
-            Student[] people = new Student[] { s1, s2 };
+            Person p3 = new Person(13, "Anna");
+            Person[] people = new Person[] { s1, s2, p3 };
 
-            XmlSerializer formatter = new XmlSerializer(typeof(Student[]));
+            XmlSerializer formatter = new XmlSerializer(
+                typeof(Person[]), new Type[] { typeof(Student) });
 
             using (FileStream fs = new FileStream("people.xml", FileMode.OpenOrCreate))
             {
@@ -49,7 +51,7 @@ namespace Example09
 
             using (FileStream fs = new FileStream("people.xml", FileMode.OpenOrCreate))
             {
-                Student[] newpeople = (Student[])formatter.Deserialize(fs);
+                Person[] newpeople = (Person[])formatter.Deserialize(fs);
 
                 foreach (Person p in newpeople)
                 {
