@@ -68,7 +68,8 @@ namespace Task02
             HSE.Departments = new List<Dept>();
             HSE.Departments.Add(SE);
 
-            DataContractJsonSerializer binformatter = new DataContractJsonSerializer(typeof(University),
+            DataContractJsonSerializer binformatter = 
+                new DataContractJsonSerializer(typeof(University),
                 new Type[] { typeof(Professor)});
 
             // Сериализация

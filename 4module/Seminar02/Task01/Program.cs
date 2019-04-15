@@ -55,10 +55,12 @@ namespace Task01
             Student[] list271 = {new Student("Яколев", 2),
                 new Student("Юрьевa", 2),new Student("Энатов",2)};
             Group gr271 = new Group("ПИ-271", list271);
+
             Group[] groups = new Group[] { gr171, gr271 };
 
             FileStream bas = new FileStream("group.ser", FileMode.Create);
-            DataContractJsonSerializer format = new DataContractJsonSerializer(typeof(Group[]));
+            DataContractJsonSerializer format = 
+                new DataContractJsonSerializer(typeof(Group[]));
             format.WriteObject(bas, groups);
             bas.Close();
 

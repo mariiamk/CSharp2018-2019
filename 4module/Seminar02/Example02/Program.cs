@@ -46,7 +46,8 @@ namespace Serialization
             Person person2 = new Person("Bill", 25, new Company("Apple"));
             Person[] people = new Person[] { person1, person2 };
 
-            DataContractJsonSerializer jsonFormatter = new DataContractJsonSerializer(typeof(Person[]));
+            DataContractJsonSerializer jsonFormatter = 
+                new DataContractJsonSerializer(typeof(Person[]));
 
             using (FileStream fs = new FileStream("people.json", FileMode.OpenOrCreate))
             {

@@ -7,12 +7,12 @@ using System.Runtime.Serialization;
 
 namespace Serialization
 {
-    [DataContract]
+    [Serializable]
     public class Person
     {
         [DataMember]
         public string Name { get; set; }
-        //[DataMember]
+        [DataMember]
         public int Age { get; set; }
 
         public Person(string name, int year)
@@ -30,16 +30,20 @@ namespace Serialization
             Person person2 = new Person("Bill", 25);
             Person[] people = new Person[] { person1, person2 };
 
-            DataContractJsonSerializer jsonFormatter = new DataContractJsonSerializer(typeof(Person[]));
+            DataContractJsonSerializer jsonFormatter = 
+                new DataContractJsonSerializer(typeof(Person[]));
 
-            using (FileStream fs = new FileStream("people.json", FileMode.Create))
+            using (FileStream fs = new FileStream("people.json", 
+                FileMode.Create))
             {
                 jsonFormatter.WriteObject(fs, people);
             }
 
-            using (FileStream fs = new FileStream("people.json", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream("people.json", 
+                FileMode.OpenOrCreate))
             {
-                Person[] newpeople = (Person[])jsonFormatter.ReadObject(fs);
+                Person[] newpeople = (Person[])jsonFormatter.
+                    ReadObject(fs);
 
                 foreach (Person p in newpeople)
                 {
