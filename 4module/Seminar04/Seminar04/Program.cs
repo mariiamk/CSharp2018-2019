@@ -1,63 +1,29 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
-// https://professorweb.ru/my/csharp/charp_theory/level12/12_20.php
-
-namespace ConsoleApplication1
+class MainClass
 {
-    class Letter
+    public static void Main(string[] args)
     {
-        char ch = 'А';
-        int end;
+        Stack stack = new Stack();
+        /*
+        for (int i = 0; i < 5; i++)
+            stack.Push(i ^ 2);
 
-        public Letter(int end)
-        {
-            this.end = end;
-        }
+        Console.Write(stack.Count);
 
-        // Итератор, возвращающий end-букв
-        public IEnumerator GetEnumerator()
-        {
-            for (int i = 0; i < this.end; i++)
-            {
-                if (i == 33) yield break; // Выход из итератора, если закончится алфавит
-                yield return (char)(ch + i);
-            }
-        }
+        for (int i = 0; i < stack.Count; i++)
+            Console.Write(stack.Pop());
+            */
 
-        // Создание именованного итератора
-        public IEnumerable MyItr(int begin, int end)
-        {
-            for (int i = begin; i <= end; i++)
-            {
-                yield return (char)(ch + i);
-            }
-        }
-    }
+        Stack<string> numbers = new Stack<string>();
+        numbers.Push("one");
+        numbers.Push("two");
 
-    class Program
-    {
-        static void Main()
-        {
-            Console.Write("Сколько букв вывести? ");
-            int i = int.Parse(Console.ReadLine());
+        for (int i = 0; i < numbers.Count; i++)
+            Console.WriteLine(numbers.Pop());
 
-            Letter lt = new Letter(i);
-            Console.WriteLine("\nРезультат: \n");
-
-            foreach (char c in lt)
-                Console.Write(c + " ");
-
-            Console.Write("\nВведите пределы\n\nMin: ");
-            int j = int.Parse(Console.ReadLine());
-            Console.Write("Max: ");
-            int y = int.Parse(Console.ReadLine());
-            Console.WriteLine("\nРезультат: \n");
-
-            foreach (char c in lt.MyItr(j, y))
-                Console.Write(c + " ");
-
-            Console.ReadLine();
-        }
+        Console.ReadKey();
     }
 }
