@@ -83,7 +83,7 @@ namespace Task08
             // Свойство для возврата 
             // текущего элемента последовательности: 
             object IEnumerator.Current { get { return Current; } }
-
+             
             // Заглушка для нереализованного 
             // члена интерфейса IEnumerator:   
             void IDisposable.Dispose() { }
