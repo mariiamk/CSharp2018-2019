@@ -64,7 +64,7 @@ namespace Task08
                 {
                     Reset();    // восстановим состояние объекта
                     return false;
-                }
+                } 
             }
             // Объявление метода Reset из интерфейса IEnumerator:
             public void Reset()
