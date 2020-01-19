@@ -5,8 +5,29 @@ namespace Task01
     class Program
     {
         public delegate int Cast(double p);
+
+        public static int ForMyDelegate(double value) 
+        {
+            return (int)value;
+        }
+
+
         static void Main(string[] args)
         {
+            /* examples
+            Cast cast = ForMyDelegate;
+            Console.WriteLine(cast(10.5));
+
+            Cast cast2 = delegate (double p) {
+                return (int)p;
+            };
+            Console.WriteLine(cast2(11.5));
+
+            Cast cast3 = p => (int)p;
+            Console.WriteLine(cast3(12.5));
+
+            Console.ReadKey();*/
+
             Cast obj1 = delegate (double par)
             {
                 return (int)Math.Round((par) / 2 * 2);

@@ -16,6 +16,7 @@ namespace Example02
                 from num in numbers
                 where (num % 2) == 0
                 select num;
+
             foreach (int num in numQuery)
             {
                 Console.Write("{0,1} ", num);
